@@ -2,28 +2,31 @@ export const timeline = [
   {
     id: 1,
     date: 'March 2026 – Present',
+    datePast: false,
     role: 'Software Development Intern',
-    company: 'Jaagruk Bharat',
-    dotStyle: {},
+    company: 'Jaagruk Bharat · Full-time Remote',
     bullets: [
-      'Designed & deployed <strong>27 config microservices</strong> using Next.js + TypeScript across the platform.',
-      'Scraped, cleaned, and integrated government scheme data from schemes.gov enabling end-to-end scheme discovery.',
-      'Engineered an <strong>AI chatbot assistant</strong> with multi-turn conversation support for government services.',
-      'Architected an admin database for user chat histories enabling analytics and audit capabilities.',
-      'Developed full <strong>in-chat payment flow</strong> from service selection through payment confirmation.',
+      'Architected and deployed <strong>27 modular config microservices</strong> in Next.js + TypeScript, establishing reusable patterns adopted across the engineering team.',
+      'Built an <strong>AI-powered chatbot</strong> for government service discovery with multi-turn context, backed by a PostgreSQL admin DB for analytics and audit trails.',
+      'Scraped, normalised, and integrated all scheme data from <strong>schemes.gov.in</strong> — handling varied HTML formats at scale with robust validation and deduplication.',
+      'Implemented a complete <strong>in-chat payment flow</strong>: service selection → booking → payment confirmation — fully integrated into the chatbot UX.',
+      'Wrote clean, type-safe TypeScript across all modules; maintained code review standards and contributed to shared tooling.',
     ],
+    tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'OpenAI API', 'REST APIs', 'Microservices'],
     isLast: false,
   },
   {
     id: 2,
     date: '2021 – 2025',
+    datePast: true,
     role: 'B.Tech Computer Science & Engineering',
-    company: 'WITS, Warangal — CGPA: 7.58/10',
-    dotStyle: { background: 'var(--purple)', boxShadow: 'var(--glow-blue)' },
+    company: 'WITS, Warangal · CGPA 7.58 / 10',
     bullets: [
-      'Core coursework: DSA, OOP, System Design, DBMS, OS, Computer Networks.',
-      'Built multiple full-stack and AI projects applying academic knowledge to real systems.',
+      'Core coursework: <strong>Data Structures & Algorithms</strong>, Object-Oriented Programming, System Design, DBMS, Operating Systems, Computer Networks.',
+      'Built GrowTech (AI agriculture chatbot), Tuition Tutor (FastAPI booking platform), and AI Crop Advisor — applying academic theory to real production systems.',
+      'Gained strong foundations in <strong>Python, SQL, REST API design</strong>, and software development lifecycle.',
     ],
+    tech: ['Python', 'SQL', 'OOP', 'DSA', 'System Design', 'OS', 'Networks'],
     isLast: true,
   },
 ]
@@ -31,24 +34,26 @@ export const timeline = [
 export const certifications = [
   {
     id: 1,
+    icon: '🏆',
     org: 'HackerRank',
-    name: 'Software Development Intern',
-    desc: 'Problem-solving, software development fundamentals, and basic system design.',
+    name: 'Software Engineering Certificate',
+    desc: 'Covered problem-solving, software engineering fundamentals, algorithmic thinking, and basic system design patterns.',
   },
   {
     id: 2,
+    icon: '🐍',
     org: 'HackerRank',
-    name: 'Python (Basic)',
-    desc: 'Validated proficiency in Python control flow and data structures.',
+    name: 'Python (Basic) Certificate',
+    desc: 'Validated proficiency in Python — control flow, data structures, functions, and OOP fundamentals.',
   },
 ]
 
 export const education = {
   degree: 'B.Tech — Computer Science & Engineering',
-  school: 'Warangal Institute of Technology and Science (WITS), Warangal',
+  school: 'Warangal Institute of Technology and Science (WITS)',
   tags: [
-    { label: '2021 – 2025',     color: 'cyan'   },
-    { label: 'CGPA: 7.58 / 10', color: 'green'  },
-    { label: 'CSE',             color: 'purple' },
+    { label: '2021 – 2025', color: 'blue'   },
+    { label: 'CGPA: 7.58',  color: 'green'  },
+    { label: 'CSE',         color: 'violet' },
   ],
 }

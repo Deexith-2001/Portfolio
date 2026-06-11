@@ -1,38 +1,45 @@
 import { projects } from '../data/projects'
-import { useTilt } from '../hooks/useTilt'
+
+const LANG_META = {
+  TypeScript: { cls: 'lang-ts',   label: 'TypeScript' },
+  Python:     { cls: 'lang-py',   label: 'Python'     },
+  HTML:       { cls: 'lang-html', label: 'HTML/CSS'   },
+  JS:         { cls: 'lang-js',   label: 'JavaScript' },
+}
 
 export default function Projects() {
-  const tilt = useTilt()
-
   return (
     <section id="projects">
       <div className="projects-header reveal">
         <div>
-          <div className="section-label">What I&apos;ve Built</div>
-          <h2 className="section-title">Featured <span className="grad">Projects</span></h2>
+          <div className="section-comment">// 03 — work</div>
+          <h2 className="section-title">
+            Featured <span className="accent">Projects</span>
+          </h2>
         </div>
         <a
           href="https://github.com/Deexith-2001"
-          target="_blank"
-          rel="noreferrer"
+          target="_blank" rel="noreferrer"
           className="btn-secondary"
-          style={{ padding: '11px 22px', fontSize: '0.8rem' }}
+          style={{ fontSize: '0.8rem', height: '38px', padding: '0 18px' }}
         >
-          View All on GitHub →
+          ⭐ GitHub Profile →
         </a>
       </div>
 
       <div className="projects-grid">
         {projects.map(p => (
-          <div key={p.id} className={`project-card ${p.col} reveal`} {...tilt}>
-            <div className={`project-glow ${p.glow}`} />
-            <div className="project-num">{p.num}</div>
+          <div key={p.id} className={`project-card${p.featured ? ' featured' : ''} reveal`}>
+            <div className="project-card-top">
+              <div>
+                <div className="project-num">{p.num}</div>
+                <h3 className="project-title">{p.title}</h3>
+              </div>
+              {p.badge && (
+                <span className={`project-badge badge-${p.badgeType}`}>{p.badge}</span>
+              )}
+            </div>
 
-            {p.badge && (
-              <span className={`project-badge badge-${p.badgeType}`}>{p.badge}</span>
-            )}
-
-            <h3 className="project-title">{p.title}</h3>
             <p className="project-desc" dangerouslySetInnerHTML={{ __html: p.desc }} />
 
             <div className="project-stack">
@@ -41,19 +48,31 @@ export default function Projects() {
               ))}
             </div>
 
-            <div className="project-links">
-              {p.status && (
-                <span style={{ fontSize: '0.8rem', color: 'var(--green)' }}>{p.status}</span>
-              )}
-              {p.links && p.links.map(l => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className={`proj-link proj-link-${l.type}`}
-                >
-                  {l.label}
-                </a>
-              ))}
+            <div className="project-footer">
+              <div className="project-lang">
+                {p.lang && (
+                  <>
+                    <span className={`lang-dot ${LANG_META[p.lang]?.cls || 'lang-py'}`} />
+                    {LANG_META[p.lang]?.label || p.lang}
+                  </>
+                )}
+              </div>
+
+              <div className="project-links">
+                {p.status && (
+                  <span className="proj-status-live">{p.statusLabel || 'In Production'}</span>
+                )}
+                {p.links && p.links.map(l => (
+                  <a
+                    key={l.label}
+                    href={l.href}
+                    target="_blank" rel="noreferrer"
+                    className={`proj-link proj-link-${l.type}`}
+                  >
+                    {l.label}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         ))}

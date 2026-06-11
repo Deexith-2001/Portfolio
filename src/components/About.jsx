@@ -1,97 +1,139 @@
-const CODE_HTML = `<span class="keyword">const</span> me = {<br/>&nbsp;&nbsp;<span class="prop">stack</span>: [<span class="string">"Python"</span>, <span class="string">"Next.js"</span>],<br/>&nbsp;&nbsp;<span class="prop">ai</span>: <span class="string">"OpenAI + NLP"</span>,<br/>&nbsp;&nbsp;<span class="prop">microservices</span>: <span class="num-lit">27</span>,<br/>&nbsp;&nbsp;<span class="prop">cgpa</span>: <span class="num-lit">7.58</span><br/>};`
+const SNIPPET = [
+  { line: '// sai-deexith.js',         cls: 'hl-cm' },
+  { line: '',                           cls: '' },
+  { line: 'const developer = {',        cls: '' },
+  { line: '  name: "Sai Deexith",',     cls: '', k: 'name',    v: '"Sai Deexith"' },
+  { line: '  grad: "B.Tech CSE 2025",', cls: '', k: 'grad',    v: '"B.Tech CSE 2025"' },
+  { line: '  cgpa: 7.58,',              cls: '', k: 'cgpa',    v: '7.58', num: true },
+  { line: '  role: "Full-Stack + AI",', cls: '', k: 'role',    v: '"Full-Stack + AI"' },
+  { line: '  loves: ["Python",',        cls: '', k: 'loves',   v: '["Python",' },
+  { line: '         "Systems",',        cls: '' },
+  { line: '         "AI/ML"],',         cls: '' },
+  { line: '  status: "open-to-work",',  cls: '', k: 'status',  v: '"open-to-work"' },
+  { line: '};',                         cls: '' },
+]
 
 export default function About() {
   return (
     <section id="about">
       <div className="reveal">
-        <div className="section-label">Who I Am</div>
+        <div className="section-comment">// 01 — about-me</div>
         <h2 className="section-title">
-          Building Systems<br />that <span className="grad">Actually Ship</span>
+          I build systems<br />that <span className="accent">actually ship</span>
         </h2>
-        <p className="about-text">
-          I&apos;m a <strong>Computer Science graduate (B.Tech, 2025)</strong> from WITS, Warangal,
-          with a passion for building robust backend systems and intelligent applications.
-          I thrive at the intersection of software engineering and AI.
+        <p className="about-body">
+          I&apos;m a <strong>Computer Science graduate (B.Tech, 2025)</strong> from WITS, Warangal.
+          I thrive at the intersection of backend engineering and applied AI — designing systems
+          that are clean under the hood and impactful at the surface.
         </p>
-        <p className="about-text">
-          At Jaagruk Bharat, I&apos;ve been deep in production — designing microservice architectures,
-          scraping and integrating large government datasets, and shipping an AI chatbot
-          with full payment flow — all in <strong>Next.js + TypeScript</strong>.
+        <p className="about-body">
+          At <strong>Jaagruk Bharat</strong>, I go deep into production every day — architecting
+          microservice configs, scraping and normalising large-scale government datasets, and shipping
+          an AI chatbot with a complete in-chat payment flow, all in <strong>Next.js + TypeScript</strong>.
+          Before that, I built full-stack Python projects covering AI recommendations, booking
+          platforms, and data management systems.
+        </p>
+        <p className="about-body">
+          I care about clean API contracts, readable code, and systems that are genuinely
+          maintainable by the next developer. I&apos;m equally comfortable working solo
+          or pairing on a fast-moving team.
         </p>
 
-        <div className="info-grid">
-          <div className="info-item">
-            <span className="info-key">Email</span>
-            <span className="info-val">
+        <div className="about-meta">
+          <div className="meta-item">
+            <span className="meta-key">Email</span>
+            <span className="meta-val">
               <a href="mailto:Deexithmsd13@gmail.com">Deexithmsd13@gmail.com</a>
             </span>
           </div>
-          <div className="info-item">
-            <span className="info-key">Phone</span>
-            <span className="info-val">+91 77807 46802</span>
+          <div className="meta-item">
+            <span className="meta-key">Phone</span>
+            <span className="meta-val">+91 77807 46802</span>
           </div>
-          <div className="info-item">
-            <span className="info-key">Education</span>
-            <span className="info-val">B.Tech CSE, WITS 2025</span>
+          <div className="meta-item">
+            <span className="meta-key">Education</span>
+            <span className="meta-val">B.Tech CSE · WITS 2025</span>
           </div>
-          <div className="info-item">
-            <span className="info-key">Status</span>
-            <span className="info-val" style={{ color: 'var(--green)' }}>● Available Now</span>
+          <div className="meta-item">
+            <span className="meta-key">Status</span>
+            <span className="meta-val available">Available Now</span>
+          </div>
+          <div className="meta-item">
+            <span className="meta-key">Location</span>
+            <span className="meta-val">Warangal, India 🇮🇳</span>
+          </div>
+          <div className="meta-item">
+            <span className="meta-key">GitHub</span>
+            <span className="meta-val">
+              <a href="https://github.com/Deexith-2001" target="_blank" rel="noreferrer">
+                @Deexith-2001
+              </a>
+            </span>
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-          <a href="mailto:Deexithmsd13@gmail.com" className="btn-primary"  style={{ padding: '12px 26px', fontSize: '0.82rem' }}>Email Me</a>
-          <a href="#" className="btn-secondary" style={{ padding: '12px 26px', fontSize: '0.82rem' }}>Download CV</a>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+          <a href="mailto:Deexithmsd13@gmail.com" className="btn-primary">
+            Email Me →
+          </a>
+          <a href="#" className="btn-secondary">
+            Download CV
+          </a>
         </div>
       </div>
 
-      <div className="about-visual reveal">
-        {/* Main card */}
-        <div className="about-card-3d card-main">
-          <div className="avatar-ring">
-            <div className="avatar-inner">SD</div>
-          </div>
-          <div style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '2px' }}>
-            Sai Deexith Musham
-          </div>
-          <div style={{ fontSize: '0.78rem', color: 'var(--cyan)', marginBottom: '18px', fontFamily: "'Space Mono',monospace" }}>
-            Python Dev · Full-Stack · AI
-          </div>
-          <div style={{ fontSize: '0.82rem', color: 'var(--text-dim)', lineHeight: 1.7, marginBottom: '6px' }}>
-            🏢 Jaagruk Bharat (Intern)
-          </div>
-          <div style={{ fontSize: '0.82rem', color: 'var(--text-dim)', lineHeight: 1.7, marginBottom: '6px' }}>
-            🎓 B.Tech CSE — WITS 2025
-          </div>
-          <div style={{ fontSize: '0.82rem', color: 'var(--green)', lineHeight: 1.7 }}>
-            ● Open to work
-          </div>
-          <div className="code-snippet" dangerouslySetInnerHTML={{ __html: CODE_HTML }} />
-        </div>
-
-        {/* Accent card 1 */}
-        <div className="about-card-3d card-accent-1">
-          <div style={{ fontSize: '0.68rem', color: 'var(--text-dim)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '6px' }}>
-            Currently at
-          </div>
-          <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text)' }}>
-            Jaagruk Bharat
-          </div>
-          <div style={{ marginTop: '8px', display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-            <div className="skill-tag tag-cyan"   style={{ fontSize: '0.62rem', padding: '2px 9px' }}>Next.js</div>
-            <div className="skill-tag tag-purple" style={{ fontSize: '0.62rem', padding: '2px 9px' }}>TypeScript</div>
+      {/* Right column — profile card */}
+      <div className="about-card reveal">
+        <div className="about-card-header">
+          <div className="avatar">SD</div>
+          <div>
+            <div className="about-card-name">Sai Deexith Musham</div>
+            <div className="about-card-role">Python Dev · Full-Stack · AI Builder</div>
           </div>
         </div>
 
-        {/* Accent card 2 */}
-        <div className="about-card-3d card-accent-2">
-          <div style={{ fontSize: '0.68rem', color: 'var(--text-dim)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '4px' }}>
-            Backend
+        <div className="about-card-body">
+          <div className="about-card-row">
+            <span className="row-icon">🏢</span>
+            <span className="row-label">Work</span>
+            <span>Jaagruk Bharat — Software Intern</span>
           </div>
-          <div style={{ fontSize: '0.78rem', color: 'var(--cyan)', fontFamily: "'Space Mono',monospace" }}>
-            FastAPI · Flask · PostgreSQL
+          <div className="about-card-row">
+            <span className="row-icon">🎓</span>
+            <span className="row-label">Degree</span>
+            <span>B.Tech CSE · WITS · 7.58 GPA</span>
           </div>
+          <div className="about-card-row">
+            <span className="row-icon">📍</span>
+            <span className="row-label">Location</span>
+            <span>Warangal, Telangana, India</span>
+          </div>
+          <div className="about-card-row">
+            <span className="row-icon">⚡</span>
+            <span className="row-label">Primary</span>
+            <span>Python · FastAPI · Next.js</span>
+          </div>
+          <div className="about-card-row">
+            <span className="row-icon">🤖</span>
+            <span className="row-label">AI/ML</span>
+            <span>OpenAI API · NLP · Prompt Eng.</span>
+          </div>
+          <div className="about-card-row">
+            <span className="row-icon">🟢</span>
+            <span className="row-label">Status</span>
+            <span style={{ color: 'var(--green)', fontWeight: 600 }}>Open to work</span>
+          </div>
+        </div>
+
+        <div className="about-card-snippet">
+          <span className="hl-cm">{'// developer.json'}</span>{'\n'}
+          <span className="hl-kw">const </span>
+          <span className="hl-fn">me</span> = {'{'}{'\n'}
+          {'  '}<span className="hl-str">stack</span>: [<span className="hl-str">"Python"</span>, <span className="hl-str">"Next.js"</span>],{'\n'}
+          {'  '}<span className="hl-str">services</span>: <span className="hl-num">27</span>,{'\n'}
+          {'  '}<span className="hl-str">ai</span>: <span className="hl-str">"OpenAI + NLP"</span>,{'\n'}
+          {'  '}<span className="hl-str">open</span>: <span className="hl-num">true</span>{'\n'}
+          {'}'};
         </div>
       </div>
     </section>

@@ -5,16 +5,14 @@ export default function Nav() {
 
   useEffect(() => {
     const nav = navRef.current
-    const onScroll = () => {
-      nav.style.padding = window.scrollY > 50 ? '12px 60px' : '20px 60px'
-    }
-    window.addEventListener('scroll', onScroll)
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <nav ref={navRef}>
-      <a href="#hero" className="nav-logo">&lt;SDM /&gt;</a>
+      <a href="#hero" className="nav-logo">{'<'}SDM {'/>'}</a>
       <ul className="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
