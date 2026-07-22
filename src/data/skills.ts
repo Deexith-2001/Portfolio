@@ -4,7 +4,6 @@ export interface SkillCategory {
   icon: string
   description: string
   skills: string[]
-  accentColor: string
 }
 
 export const skillCategories: SkillCategory[] = [
@@ -13,40 +12,35 @@ export const skillCategories: SkillCategory[] = [
     name: 'Frontend',
     icon: '◈',
     description: 'Building interfaces users love',
-    skills: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3'],
-    accentColor: 'blue',
+    skills: ['Next.js (App Router)', 'React', 'TypeScript', 'Tailwind CSS', 'Chakra UI', 'Bootstrap'],
   },
   {
     id: 'backend',
-    name: 'Backend',
+    name: 'Backend & APIs',
     icon: '⬡',
-    description: 'APIs, services, and business logic',
-    skills: ['Node.js', 'Express', 'FastAPI', 'Flask', 'REST APIs', 'JWT Auth', 'Async Python'],
-    accentColor: 'purple',
-  },
-  {
-    id: 'architecture',
-    name: 'Architecture',
-    icon: '◎',
-    description: 'Systems that scale and last',
-    skills: ['Microservices', 'System Design', 'Config Patterns', 'API Design', 'OOP', 'SOLID'],
-    accentColor: 'indigo',
-  },
-  {
-    id: 'database',
-    name: 'Database',
-    icon: '▣',
-    description: 'Data modeling and storage',
-    skills: ['PostgreSQL', 'MongoDB', 'SQL', 'Schema Design', 'CRUD Design', 'Admin DBs'],
-    accentColor: 'teal',
+    description: 'Services, contracts, business logic',
+    skills: ['NestJS', 'FastAPI', 'Flask', 'Node.js', 'REST API Design', 'Microservices'],
   },
   {
     id: 'ai',
     name: 'AI & LLMs',
     icon: '◇',
     description: 'Intelligent systems and automation',
-    skills: ['OpenAI API', 'LLM Applications', 'Prompt Engineering', 'NLP Pipelines', 'AI Workflows', 'RAG'],
-    accentColor: 'violet',
+    skills: ['Gemini AI API', 'Claude API', 'OpenAI API', 'NLP Pipelines', 'Prompt Engineering', 'Multi-turn Chatbots'],
+  },
+  {
+    id: 'database',
+    name: 'Databases & ORMs',
+    icon: '▣',
+    description: 'Data modeling and persistence',
+    skills: ['PostgreSQL', 'MySQL', 'Supabase', 'Prisma ORM', 'SQLAlchemy ORM', 'Data Modeling'],
+  },
+  {
+    id: 'cloud',
+    name: 'Cloud & DevOps',
+    icon: '⬢',
+    description: 'Shipping and scaling software',
+    skills: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Vercel', 'Render', 'CI/CD'],
   },
   {
     id: 'languages',
@@ -54,14 +48,12 @@ export const skillCategories: SkillCategory[] = [
     icon: '⟨⟩',
     description: 'Code I write fluently',
     skills: ['Python', 'TypeScript', 'JavaScript', 'SQL'],
-    accentColor: 'amber',
   },
   {
-    id: 'tools',
-    name: 'Tools',
+    id: 'practice',
+    name: 'Engineering Practice',
     icon: '⚙',
-    description: 'Craft and workflow',
-    skills: ['Git', 'GitHub', 'Docker', 'Postman', 'VS Code', 'Agile/Scrum'],
-    accentColor: 'slate',
+    description: 'How I build and ship',
+    skills: ['System Design', 'OOP', 'Config Patterns', 'pytest Testing', 'Git & GitHub', 'Agile/Scrum'],
   },
 ]

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import Cursor from '@/components/Cursor'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,12 +24,12 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Sai Deexith — Backend Engineer · Full Stack Developer · AI Builder',
+  title: 'Sai Deexith — Full-Stack Engineer · AI & Backend Systems',
   description:
-    'Backend Engineer and Full Stack Developer building scalable systems, intelligent applications, and products that solve real-world problems. Currently at Jaagruk Bharat.',
+    'Full-Stack Engineer building production backend microservices, AI chatbots with payments, and autonomous AI agents. Currently at Jaagruk Bharat, creator of JobAgent.',
   keywords: [
+    'full stack engineer',
     'backend engineer',
-    'full stack developer',
     'AI builder',
     'software engineer',
     'microservices',
@@ -40,9 +39,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Sai Deexith Musham' }],
   openGraph: {
-    title: 'Sai Deexith — Backend Engineer · AI Builder',
+    title: 'Sai Deexith — Full-Stack Engineer · AI & Backend Systems',
     description:
-      'Building scalable systems, intelligent applications, and products that solve real-world problems.',
+      'Building production backend microservices, AI chatbots with payments, and autonomous AI agents.',
     type: 'website',
     locale: 'en_US',
   },
@@ -56,10 +55,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${playfair.variable} ${jetbrains.variable} font-sans bg-[#050505] text-[#ededed] antialiased`}
+        className={`${inter.variable} ${playfair.variable} ${jetbrains.variable} font-sans bg-paper text-ink antialiased`}
       >
         <div className="noise-overlay" aria-hidden="true" />
-        <Cursor />
         {children}
       </body>
     </html>

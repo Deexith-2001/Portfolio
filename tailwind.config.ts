@@ -13,16 +13,12 @@ const config: Config = {
         display: ['var(--font-playfair)', 'Georgia', 'serif'],
         mono: ['var(--font-mono)', 'Courier New', 'monospace'],
       },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'float-delayed': 'float 6s ease-in-out 3s infinite',
-        'pulse-slow': 'pulse 3s ease-in-out infinite',
-        'spin-slow': 'spin 20s linear infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
+      colors: {
+        ink: 'rgb(234 231 224 / <alpha-value>)',
+        paper: '#0a0a0a',
+        accent: {
+          DEFAULT: '#c8663f',
+          light: '#dd8a68',
         },
       },
     },
